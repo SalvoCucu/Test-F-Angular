@@ -1,0 +1,23 @@
+<div class="container-button">
+    <button class="btn btn-primary" (click)="genereteActivity()">Genera Attività</button>
+</div>
+<div class="container-activity" *ngIf="status">
+    
+    <div>
+        <h3>{{currentActivity.activity}}</h3>
+    </div>
+    
+    <div>
+        <ul>
+            <li>Difficoltà: {{currentActivity.accessibility}}</li>
+            <li>Tipo: {{currentActivity.type}}</li>
+            <li>Partecipanti: {{currentActivity.partecipants}}</li>
+            <li>Prezzo: {{currentActivity.price}}</li>
+            <li>Link: {{currentActivity.link}}</li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-warning" (click)="saveActivity()">Salva Preferito</button>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+<div class="container" >
+    <table class="table" >
+    <thead>
+        <tr>
+            <th>Attività</th>
+            <th>Difficoltà</th>
+            <th>Tipo</th>
+            <th>Partecipanti</th>
+            <th>Prezzo</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="activityA.length > 0">
+        <tr *ngFor="let currentActivity of activityA"> 
+            <td>{{currentActivity.activity}}</td>
+            <td>{{currentActivity.accessibility}}</td>
+            <td>{{currentActivity.type}}</td>
+            <td>{{currentActivity.partecipants}}</td>
+            <td>{{currentActivity.price}}</td>
+            <td>{{currentActivity.link}}</td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="!(activityA.length > 0)">
+        <td colspan="6" style="text-align: center;">Nessuna attività preferita</td> 
+    </tbody>
+</table>
+</div>
